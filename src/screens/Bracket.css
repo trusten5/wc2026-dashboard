@@ -1,0 +1,71 @@
+.bracket-layout {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.date-strip {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.date-strip::-webkit-scrollbar { height: 3px; }
+
+.date-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-1);
+  color: var(--text-1);
+  min-width: 48px;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+
+.date-btn:hover {
+  border-color: rgba(255,255,255,0.15);
+  color: var(--text-0);
+}
+
+.date-btn.today {
+  border-color: var(--border-accent);
+}
+
+.date-btn.active {
+  background: var(--accent-glow);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.date-btn-day {
+  font-size: 9px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.date-btn-num {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.date-btn-count {
+  font-size: 9px;
+  font-family: var(--font-mono);
+  opacity: 0.6;
+}
+
+.bracket-matches {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 700px;
+}
